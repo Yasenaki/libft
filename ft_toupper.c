@@ -3,29 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 14:40:42 by jopires-          #+#    #+#             */
-/*   Updated: 2024/10/09 18:02:09 by marvin           ###   ########.fr       */
+/*   Updated: 2024/10/30 19:21:44 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_toupper(char *str)
+int ft_toupper(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (!(str[i] >= 'A' && str[i] <= 'Z'))
-			return (0);
-		i++;
-	}
-	return (1);
+	if(c >= 'a' && c <= 'z')
+		return(c -'a' + 'A');
+	return (c);
 }
+
 /*int main()
 {	
-	printf("%d",ft_str_is_uppercase(""));
+	int a = 'A';
+	printf("%c - %d \n",ft_toupper(a),ft_toupper(a));
 }*/

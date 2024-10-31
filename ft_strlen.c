@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jopires- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 21:14:55 by jopires-          #+#    #+#             */
-/*   Updated: 2024/08/25 21:15:00 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:13:15 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include<unistd.h>
-//#include<stdio.h>
+#include "libft.h"
+
 int	ft_strlen(char *str)
 {
 	int	idx;

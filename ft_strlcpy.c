@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jopires- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 10:48:28 by jopires-          #+#    #+#             */
-/*   Updated: 2024/08/27 10:48:44 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/10/31 14:42:30 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include<stdio.h>
-char	*ft_strcpy(char *dest, char *src)
+#include "libft.h"
+
+size_t strlcpy(char *dest, const char *src, size_t size)
 {
 	int	i;
 	int	n;
 
 	i = 0;
 	n = 0;
-	while (src[i] != '\0')
+	if(!size)
+		return(ft_strlen((char *)src));
+	while ((int)size -1 > i && src[i])
 	{
 		dest[i] = src[i];
 		i++;
 	}
 	dest [i] = '\0';
-	return (dest);
+	return (ft_strlen((char *)src));
 }
 /*int main()
 {
