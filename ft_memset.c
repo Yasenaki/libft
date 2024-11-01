@@ -6,7 +6,7 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:38:06 by jopires-          #+#    #+#             */
-/*   Updated: 2024/10/29 19:19:48 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:14:38 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void *ft_memset(void *s, int c, size_t n)
         temp[i] = (char)c;
         i++;
     }
-    temp[i] = '\0';
     return (s);   
 }
 //ver cast e fazer libft.h

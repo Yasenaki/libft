@@ -6,34 +6,28 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 12:11:33 by jopires-          #+#    #+#             */
-/*   Updated: 2024/10/29 14:16:11 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:56:44 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char *str)
+int ft_isalpha(int c)
 {
 	int	x;
 	int	i;
 
 	i = 0;
 	x = 0;
-	if (str[i] == '\0')
-		return (1);
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			x = 1;
-		else if (str[i] >= 'A' && str[i] <= 'Z')
-			x = 1;
-		else
-			return (0);
-		i++;
-	}
-	return (x);
+	if (c >= 'a' && c <= 'z')
+	    return (1);
+	else if (c >= 'A' && c <= 'Z')
+	    return (1);
+    else
+	return (0);	
 }
 /*int main()
 {
-	printf("%d",ft_str_is_alpha("yugdyWiwqgd"));
-}*/
+	printf("%d",ft_isalpha("yugdyWiwqgd"));
+}
+*/

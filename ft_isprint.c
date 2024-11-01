@@ -6,27 +6,20 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 18:01:00 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/29 14:13:15 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/01 19:05:20 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char *str)
+int ft_isprint(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (!(str[i] >= 32 && str[i] <= 126))
-			return (0);
-		i++;
-	}
+	if (!(c >= 32 && c <= 126))
+		return (0);
 	return (1);
 }
 /*int main()
-{	
+{
 	printf("%d",ft_str_is_printable("\r"));
 	printf("%d",ft_str_is_printable("\t"));
 	printf("%d",ft_str_is_printable("imjrgergerg"));
