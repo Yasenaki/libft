@@ -6,7 +6,7 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 19:22:11 by jopires-          #+#    #+#             */
-/*   Updated: 2024/10/31 14:45:39 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:56:08 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char *ft_strchr(const char *s, int c)
 {
-    int x;
-    int max;
+    size_t x;
+    size_t max;
 
     x = 0;
-    max = ft_strlen((char *)s);
-    if (c == '\0')
+    max = ft_strlen(s);
+    if ((char)c == '\0')
         return (char *)&s[max];
     while (x < max)
     {
-        if(c == (char)s[x])
+        if((char)c == (char)s[x])
             return ((char *)&s[x]);
         x++;
     }

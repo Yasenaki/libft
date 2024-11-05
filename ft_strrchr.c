@@ -6,7 +6,7 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:46:29 by jopires-          #+#    #+#             */
-/*   Updated: 2024/10/31 15:27:33 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:57:27 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@
 
     last = NULL;
     x = 0;
-    max = ft_strlen((char *)s);
-    if (c == '\0')
+    max = ft_strlen(s);
+    if ((char)c == '\0')
         return (char *)&s[max];
     while (x < max)
     {
-        if(c == (char)s[x])
+        if((char)c == (char)s[x])
             last = ((char *)&s[x]);
         x++;
     }

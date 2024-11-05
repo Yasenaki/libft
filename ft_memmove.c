@@ -6,7 +6,7 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:44:14 by jopires-          #+#    #+#             */
-/*   Updated: 2024/10/30 16:03:12 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:44:28 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
-    unsigned char *dt;
-    unsigned char *sr;
+	unsigned char *dt;
+	unsigned char *sr;
 
-
-    if (!n)
-        return (dest);
     dt = (unsigned char *)dest;
     sr = (unsigned char *)src;
-    if (dest < src)
+    if (dt < sr)
 		return (ft_memcpy(dest, src, n));
     while (n--)
     {

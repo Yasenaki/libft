@@ -6,7 +6,7 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:58:48 by jopires-          #+#    #+#             */
-/*   Updated: 2024/10/31 14:45:32 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:13:22 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,22 @@
 
 size_t ft_strlcat(char *dest, const char *src, size_t size)
 {
-	int	i;
-	int	x;
-    int dtl;
-    int srcl;
+	size_t	i;
+    size_t dtl;
+    size_t srcl;
 
 	i = 0;
-	x = 0;
-    srcl = ft_strlen((char *)src);
+    srcl = ft_strlen(src);
     dtl = ft_strlen(dest);
-
-    if (srcl > (int)size){
-        return(srcl +size);}
-	while (dest[x] != '\0')
-		x++;
-	while (i < srcl)
+    if (dtl >= size)
+		return(srcl + size);
+	while (src[i] && dtl+i < size - 1)
 	{
-		dest[x + i] = src[i];
+		dest[dtl + i] = src[i];
 		i++;
 	}
-    dest[x+i] = 0;
-        return(dtl + srcl);
+    dest[dtl+i] = 0;
+    return(dtl + srcl);
 }
 /*
  int main()
@@ -47,4 +42,4 @@ size_t ft_strlcat(char *dest, const char *src, size_t size)
 	printf("!return: %d\n %s\n",aux , b);
 	printf("@return: %d\n %s\n",aux2 , b2);
 	return(0);
-} */
+}*/

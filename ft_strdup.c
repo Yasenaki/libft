@@ -1,31 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/25 21:14:55 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/05 18:10:11 by jopires-         ###   ########.fr       */
+/*   Created: 2024/10/25 14:43:07 by jopires-          #+#    #+#             */
+/*   Updated: 2024/11/05 18:43:37 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_strcpy(char *dest, char *src)
 {
-	size_t	idx;
+	int	i;
+	int	n;
 
-	idx = 0;
-	while (str[idx] != '\0')
+	i = 0;
+	n = 0;
+	while (src[i] != '\0')
 	{
-		idx++;
+		dest[i] = src[i];
+		i++;
 	}
-	return (idx);
+	dest [i] = '\0';
+	return (dest);
 }
-/*int main()
+
+char *ft_strdup(const char *s)
 {
-	int result = ft_strlen("aaaaaaaaaaaaaaaaaaaaaaaaaa");
-	printf("%d",result);
-	return 0;
+	char	*dup;
+	int		x;
+
+	x = ft_strlen(s);
+	dup = malloc((x + 1) * sizeof(char));
+	if (! dup)
+		return (0);
+	ft_strcpy(dup, (char *)s);
+	return (dup);
+}
+/*
+int main()
+{
+	char *a = abcdefghil;
+	write(1,ft_strdup(&a),10);
+	free(a);
 }*/
