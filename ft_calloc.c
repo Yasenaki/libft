@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 12:11:33 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/05 20:52:13 by jopires-         ###   ########.fr       */
+/*   Created: 2024/11/05 19:27:42 by jopires-          #+#    #+#             */
+/*   Updated: 2024/11/05 20:29:19 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stdlib.h"
 
-int ft_isalpha(int c)
-{
-	int	x;
-	int	i;
+ /*void *calloc(size_t nmemb, size_t size)
+ {
 
-	i = 0;
-	x = 0;
-	if (c >= 'a' && c <= 'z')
-	    return (1);
-	else if (c >= 'A' && c <= 'Z')
-	    return (1);
-    else
-	return (0);	
-}
-/*int main()
-{
-	printf("%d",ft_isalpha("yugdyWiwqgd"));
-}
-*/
+ }*/
