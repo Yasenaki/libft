@@ -6,28 +6,28 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 19:22:11 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/05 17:56:08 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/06 20:24:48 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    size_t x;
-    size_t max;
+	size_t	x;
+	size_t	max;
 
-    x = 0;
-    max = ft_strlen(s);
-    if ((char)c == '\0')
-        return (char *)&s[max];
-    while (x < max)
-    {
-        if((char)c == (char)s[x])
-            return ((char *)&s[x]);
-        x++;
-    }
-    return (NULL);
+	x = 0;
+	max = ft_strlen(s);
+	if ((char)c == '\0')
+		return ((char *)&s[max]);
+	while (x < max)
+	{
+		if ((char)c == (char)s[x])
+			return ((char *)&s[x]);
+		x++;
+	}
+	return (NULL);
 }
 /*
 void test_ft_strchr() {

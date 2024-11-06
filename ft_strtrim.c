@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 15:44:14 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/06 21:19:56 by jopires-         ###   ########.fr       */
+/*   Created: 2024/11/06 21:03:28 by jopires-          #+#    #+#             */
+/*   Updated: 2024/11/06 21:46:23 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+static int	char_is_set(char c, char const *set)
 {
-	unsigned char	*dt;
-	unsigned char	*sr;
 
-	dt = (unsigned char *)dest;
-	sr = (unsigned char *)src;
-	if (dt < sr)
-		return (ft_memcpy(dest, src, n));
-	while (n--)
-	{
-		dt[n] = sr[n];
-	}
-	return (dest);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*out;
+	
 }

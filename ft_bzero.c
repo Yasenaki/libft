@@ -6,15 +6,15 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 16:10:48 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/01 16:13:15 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/06 20:44:03 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    ft_memset(s, 0, n);
+	ft_memset(s, 0, n);
 }
 /*
 int main() {
