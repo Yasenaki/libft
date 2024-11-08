@@ -6,7 +6,7 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:56:39 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/08 20:24:56 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/08 21:20:20 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	**ft_split(char const *s, char c)
 	x = 0;
 	if (!s)
 		return (NULL);
-	out = malloc((counting_words (s, c) + 1) * sizeof(char *));
+	out = ft_calloc((counting_words (s, c) + 1), sizeof(char *));
 	if (!out)
 		return (NULL);
 	while (*s)
@@ -79,7 +79,7 @@ char	**ft_split(char const *s, char c)
 		{
 			out[x] = aloc_words(s, c);
 			if (!out[x++])
-				free_str(out, x - 1);
+				return (free_str(out, x - 1));
 		}
 		while (*s && *s != c)
 			s++;
@@ -90,10 +90,15 @@ char	**ft_split(char const *s, char c)
 
 int main()
 {
-	char **result = ft_split("hello!", NULL);
+	char **result = ft_split("hello!", ' ');
 	for (int i = 0; result[i]; i++)
 	{
 		printf("result[%d] = \"%s\"\n", i, result[i]);
+	}
+	char **str=ft_split("\0aa\0bbb", '\0');
+	for (int i = 0; str[i]; i++)
+	{
+		printf("str[%d] = \"%s\"\n", i, str[i]);
 	}
 	return 0;
 }*/
