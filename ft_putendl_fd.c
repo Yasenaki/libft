@@ -6,25 +6,20 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 17:51:44 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/09 18:15:50 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 18:53:20 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void	ft_putstr_fd(char *s, int fd)
+
+void	ft_putendl_fd(char *s, int fd)
 {
 	while (*s)
 	{
 		write(fd, s, 1);
 		s++;
 	}
-}
-
-void	ft_putendl_fd(char *s, int fd)
-{
-	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
-	ft_putstr_fd(s, fd);
 }
 /*
 #include <fcntl.h>

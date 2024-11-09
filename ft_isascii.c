@@ -6,24 +6,24 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:38:14 by jopires-          #+#    #+#             */
-/*   Updated: 2024/10/29 14:14:56 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:01:22 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    int x;
+	int	x;
 
-    x = 0;
-    if (c >= 0 && c <= 127)
-    {
-        x = 1;
-    }
-    else
-        return (0);
-    return (x);
+	x = 0;
+	if (c >= 0 && c <= 127)
+	{
+		x = 1;
+	}
+	else
+		return (0);
+	return (x);
 }
 // int main ()
 // {

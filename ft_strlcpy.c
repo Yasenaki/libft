@@ -6,34 +6,35 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 10:48:28 by jopires-          #+#    #+#             */
-/*   Updated: 2024/10/31 14:42:30 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:15:53 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	int	i;
-	int	n;
+	size_t	i;
 
 	i = 0;
-	n = 0;
-	if(!size)
-		return(ft_strlen((char *)src));
-	while ((int)size -1 > i && src[i])
+	if (!size)
+		return (ft_strlen ((char *)src));
+	if (dest != 0)
 	{
-		dest[i] = src[i];
-		i++;
+		while (size -1 > i && src[i])
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest [i] = '\0';
 	}
-	dest [i] = '\0';
-	return (ft_strlen((char *)src));
+	return (ft_strlen ((char *)src));
 }
 /*int main()
 {
 	char copiar[]= "aeiou";
 	char destino[5];
-	ft_strcpy(destino,copiar);
+	ft_strlcpy(destino,copiar, 6);
 	printf("%s",destino);
 	
 }*/

@@ -6,20 +6,20 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:29:37 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/02 12:38:52 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:05:45 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
-    unsigned char   *str1;
-    unsigned char   *str2;
+	int				i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-    str1 = (unsigned char *)s1;
-    str2 = (unsigned char *)s2;
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	i = 0;
 	while (i < (int)n)
 	{
@@ -29,9 +29,9 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+/*
 #include <stdio.h>
 #include <string.h> // for comparison
-/*
 void test_ft_memcmp() {
     // Test Case 1: Equal memory blocks
     char str1[] = "Hello";

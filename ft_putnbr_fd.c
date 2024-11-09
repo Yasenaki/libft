@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_putnr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
 
@@ -20,25 +20,28 @@ void	ft_putnr_fd(int n, int fd)
 	{
 		write(fd, "-2147483648", 11);
 	}
-	if (n < 0)
-	{
-		write(fd, ('-', fd), 1);
-		n *= -1;
-	}
-	if (n > 9)
-	{
-		ft_putnr_fd((n / 10), fd);
-		ft_putnr_fd((n % 10 + '0'), fd);
-	}
 	else
 	{
-		c = n + '0';
-		write(fd, (n + '0'), 1);
+		if (n < 0)
+		{
+			n *= -1;
+			write(fd, "-", 1);
+		}
+		if (n > 9)
+		{
+			ft_putnbr_fd((n / 10), fd);
+			ft_putnbr_fd((n % 10), fd);
+		}
+		else
+		{
+			c = n + '0';
+			write(fd, &c, 1);
+		}
 	}
 }
 /*
 #include <fcntl.h>
-void test_ft_putnr_fd()
+void test_ft_putnbr_fd()
 {
 	int fd;
 	char buffer[2];
@@ -54,7 +57,7 @@ void test_ft_putnr_fd()
 
 	// Test writing a character to the file
 	long int x = -84923849038204923809238490234;
-	ft_putnr_fd(x, fd);
+	ft_putnbr_fd(x, fd);
 
 	// Reset file offset to the beginning
 	close(fd);
@@ -63,6 +66,6 @@ void test_ft_putnr_fd()
 #include <fcntl.h>
 int main()
 {
-	test_ft_putnr_fd();
+	test_ft_putnbr_fd();
 	return 0;
 }*/

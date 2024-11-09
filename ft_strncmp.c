@@ -6,22 +6,23 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 17:58:44 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/02 12:35:25 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 19:32:58 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 int	ft_strncmp(char *s1, char *s2, size_t n)
 {
 	unsigned int	i;
+
 	if (n == 0)
-		return(0);
+		return (0);
 	i = 0;
 	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
 	{
 		if (s1[i] != s2[i])
-			return (unsigned char)s1[i] - (unsigned char)s2[i];
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
 	return (0);

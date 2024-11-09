@@ -6,26 +6,25 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:38:06 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/01 18:14:38 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:03:18 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    int i;
-    unsigned char *temp;
+	int				i;
+	unsigned char	*temp;
 
-    i = 0;
-    temp = (unsigned char *)s;
-    while (n > (unsigned long)i)
-    {
-        temp[i] = (char)c;
-        i++;
-    }
-    return (s);   
+	i = 0;
+	temp = (unsigned char *)s;
+	while (n > (unsigned long)i)
+	{
+		temp[i] = (char)c;
+		i++;
+	}
+	return (s);
 }
 //ver cast e fazer libft.h
 /*int main() {
@@ -33,7 +32,7 @@ void *ft_memset(void *s, int c, size_t n)
     char buffer1[50];
     ft_memset(buffer1, 'A', sizeof(buffer1)); // Fill with 'A's
 
-    printf("Test 1 - Expected: %s\n", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    printf("Test 1 - Expected: %s\n", "aaaaaaaa");
     printf("Test 1 - Result:   %s\n", buffer1);
 
     // Test case 2: Fill an array with zeros

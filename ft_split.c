@@ -6,7 +6,7 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:56:39 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/08 21:20:20 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:12:31 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ static char	*aloc_words(const char *s, char c)
 	out = (char *)malloc(holder_lenght +1);
 	if (!out)
 		return (NULL);
-	while (i < holder_lenght){
+	while (i < holder_lenght)
+	{
 		out[i] = s[i];
 		i++;
 	}

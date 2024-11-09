@@ -6,7 +6,7 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 16:10:48 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/06 20:44:03 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:04:34 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main() {
     char buffer1[50];
     ft_bzero(buffer1, sizeof(buffer1)); // Fill with 'A's
 
-    printf("Test 1 - Expected: %s\n", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    printf("Test 1 - Expected: %s\n", "AAAAAA");
     printf("Test 1 - Result:   %s\n", buffer1);
 
     // Test case 2: Fill an array with zeros

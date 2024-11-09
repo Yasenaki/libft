@@ -6,16 +6,16 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 09:42:42 by jopires-          #+#    #+#             */
-/*   Updated: 2024/10/30 19:21:50 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:00:19 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-	if(c >= 'A' && c <= 'Z')
-		return(c -'A' + 'a');
+	if (c >= 'A' && c <= 'Z')
+		return (c - 'A' + 'a');
 	return (c);
 }
 

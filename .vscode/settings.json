@@ -3,6 +3,8 @@
 		"libft.h": "c",
 		"stdio.h": "c",
 		"unistd.h": "c",
-		"fcntl.h": "c"
+		"fcntl.h": "c",
+		"limits.h": "c",
+		"string.h": "c"
 	}
 }

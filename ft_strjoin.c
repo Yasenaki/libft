@@ -6,17 +6,17 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:53:36 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/06 21:12:22 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:12:17 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *out;
-	size_t i;
-	size_t x;
+	char	*out;
+	size_t	i;
+	size_t	x;
 
 	i = 0;
 	x = 0;

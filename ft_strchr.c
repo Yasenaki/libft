@@ -6,7 +6,7 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 19:22:11 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/06 20:24:48 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:08:19 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ void test_ft_strchr() {
     char *str1 = "Hello, World!";
     char c1 = 'W';
     char *result1 = ft_strchr(str1, c1);
-    printf("Test 1 - Expected: %s, Got: %s\n", result1, result1 ? result1 : "NULL");
+    printf("Test 1 - Expected: %s, Got: %s\n", result1, 
+	result1 ? result1 : "NULL");
 
     // Test Case 2: Character not in string
     char c2 = 'z';
@@ -45,17 +46,20 @@ void test_ft_strchr() {
     // Test Case 3: Find the first character
     char c3 = 'H';
     char *result3 = ft_strchr(str1, c3);
-    printf("Test 3 - Expected: %s, Got: %s\n", result3, result3 ? result3 : "NULL");
+    printf("Test 3 - Expected: %s, Got: %s\n",\
+	 result3, result3 ? result3 : "NULL");
 
     // Test Case 4: Find the last character
     char c4 = '!';
     char *result4 = ft_strchr(str1, c4);
-    printf("Test 4 - Expected: %s, Got: %s\n", result4, result4 ? result4 : "NULL");
+    printf("Test 4 - Expected: %s, Got: %s\n", 
+	result4, result4 ? result4 : "NULL");
 
     // Test Case 5: Find the null terminator
     char c5 = '\0';
     char *result5 = ft_strchr(str1, c5);
-    printf("Test 5 - Expected: (end of string), Got: %s\n", result5 ? result5 : "NULL");
+    printf("Test 5 - Expected: (end of string), 
+	Got: %s\n", result5 ? result5 : "NULL");
 
     // Test Case 6: Empty string
     char *str2 = "";
@@ -67,7 +71,8 @@ void test_ft_strchr() {
     char *str3 = "Special char: @, #, $";
     char c7 = '#';
     char *result7 = ft_strchr(str3, c7);
-    printf("Test 7 - Expected: %s, Got: %s\n", result7, result7 ? result7 : "NULL");
+    printf("Test 7 - Expected: %s, Got: %s\n", result7, 
+	result7 ? result7 : "NULL");
 }
 
 int main() {
