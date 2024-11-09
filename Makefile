@@ -6,7 +6,7 @@
 #    By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 13:39:37 by jopires-          #+#    #+#              #
-#    Updated: 2024/11/08 23:34:39 by jopires-         ###   ########.fr        #
+#    Updated: 2024/11/09 18:07:08 by jopires-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ SRCS = ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	ft_memmove.c ft_strlcat.c ft_strchr.c  ft_strrchr.c\
 	ft_memchr.c ft_memcmp.c ft_strnstr.c ft_strdup.c\
 	ft_calloc.c ft_substr.c ft_strjoin.c ft_strtrim.c\
-	ft_split.c	ft_itoa.c ft_strmapi.c ft_striteri.c
+	ft_split.c	ft_itoa.c ft_strmapi.c ft_striteri.c \
+	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
+	ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
 NAME = libft.a
