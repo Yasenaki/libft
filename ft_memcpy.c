@@ -6,7 +6,7 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:40:36 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/06 21:26:02 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:35:09 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (n > i)
+	while (n > i && (src || dest))
 	{
 		*(char *)(dest + i) = *(char *)(src + i);
 		i++;

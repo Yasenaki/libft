@@ -6,7 +6,7 @@
 /*   By: jopires- <jopires-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:29:37 by jopires-          #+#    #+#             */
-/*   Updated: 2024/11/09 20:05:45 by jopires-         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:21:00 by jopires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
 	i = 0;
 	while (i < (int)n)
 	{
